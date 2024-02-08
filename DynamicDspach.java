@@ -2,7 +2,7 @@
 class A
 {
 
-    public void get(){
+    public void get1(){
 
         System.out.println("Get1");
     }
@@ -31,7 +31,7 @@ class B extends A
 
             // System.out.println("Hi!");
             A b1=new B();
-            b1.get();
+            b1.get1();
         }
 
 

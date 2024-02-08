@@ -1,25 +1,21 @@
+import org.w3c.dom.ls.LSOutput;
 
-class Thread1 extends Thread{
+class A11 extends Thread{
 
-    int i=0;
-    public void run() {
-        while (i < 100) {
-
-            System.out.println("Hi I am Therad1!!!");
-            i++;
+    public void run(){
+        while(true) {
+            System.out.println("FFFFF");
         }
+
     }
 }
 
-class Thread2 extends Thread{
-
-    int i=0;
-    public void run() {
-        while (i < 100) {
-
-            System.out.println("Hi I am Therad2!!!");
-            i++;
+class A112 extends Thread{
+    public void run(){
+        while(true) {
+            System.out.println("FFFFF22222");
         }
+
     }
 }
 
@@ -27,12 +23,10 @@ public class Threads {
 
     public static void main(String[] args) {
 
-        Thread1 t1=new Thread1();
-        Thread2 t2=new Thread2();
-
-        t1.start();
-        t2.start();
-
-
+        A11 s=new A11();
+        A112 s2=new A112();
+        s.start();
+        s2.start();
+//        System.out.println("");
     }
 }
