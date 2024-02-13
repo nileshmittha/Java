@@ -13,6 +13,7 @@ public class UpdateQuery {
 
         PreparedStatement ps=con.prepareStatement("update Student set city='Delhi' where name='harry'");
         int s=ps.executeUpdate();
+        System.out.println(s);
         if(s>0){
 
             System.out.println("Updated ");
