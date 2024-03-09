@@ -1,50 +1,35 @@
-class base1{
-
-    int a;
+package collectionFramework;
 
 
-    base1(){
+class Parent{
 
-        System.out.println("I am Base default constructor");
-    }
+    int a=10;
+    float b=5.7f;
 
-    base1(int a){
-        this.a=a;
-        System.out.println("I am Base constructor"+a);
+    void fun(){
+
+        System.out.println(a+b);
     }
 
 }
 
+class childs extends Parent{
 
-class derived1 extends base1{
+    int a=18;
+    float b=9.7f;
 
-    int y;
+    void fun(){
 
-    derived1(){
-
-
-        System.out.println("I am Derived default Constructor");
-    }
-
-
-    derived1(int y){
-
-        super(y);
-
-        this.y=y;
-
-
-
-
-        System.out.println("I am Derived Constructor"+y);
+        System.out.println(a+b);
+        System.out.println(super.a+super.b); // it takes values of A and B from parents class this process is called "super Keyword"
     }
 }
-
 public class SuperKeyword {
 
     public static void main(String[] args) {
 
-        derived1 d=new derived1(45);
+        childs c1=new childs();
+        c1.fun();
 
     }
 }

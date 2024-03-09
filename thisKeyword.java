@@ -1,30 +1,38 @@
-class go{
-    int a;
-    int fon(int a){
+package collectionFramework;
 
-        this.a=a;
 
-        System.out.println(a);
-        return 0;
+class A{
 
+    int a=10;
+    float b=5.7f;
+
+    void fun(){
+
+        System.out.println(a+b);
     }
 
+}
 
+class B extends A{
+
+    int a=18;
+    float b=9.7f;
+
+    void fun(){
+
+        System.out.println(a+b);
+        System.out.println(this.a+this.b);
+    }
 }
 
 
 
 public class thisKeyword {
 
-
-
     public static void main(String[] args) {
 
-        go g1=new go();
-        g1.fon(45);
-
-
-
+        B b1=new B();
+        b1.fun();
 
     }
 }
